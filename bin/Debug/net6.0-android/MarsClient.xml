@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MarsClient</name>
+    </assembly>
+    <members>
+        <member name="P:MarsClient.MainPageViewModel.TokenGuess">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.tokenGuess"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.ShowForm">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.showForm"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.ShowControls">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.showControls"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.ShowCheckStatusButton">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.showCheckStatusButton"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.MoveResult">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.moveResult"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.Error">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.error"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.GameId">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.gameId"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.UserName">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.userName"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.Status">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.status"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.TargetColumn">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.targetColumn"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.TargetRow">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.targetRow"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.CurrentRoverColumn">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.currentRoverColumn"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.CurrentRoverRow">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.currentRoverRow"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.BatteryLevel">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.batteryLevel"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.CurrentTerrainCell">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.currentTerrainCell"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.FileName">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.fileName"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P2N2">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p2N2"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P2N1">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p2N1"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P2P0">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p2P0"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P2P1">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p2P1"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P2P2">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p2P2"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P1N2">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p1N2"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P1N1">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p1N1"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P1P0">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p1P0"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P1P1">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p1P1"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P1P2">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p1P2"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P0N2">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p0N2"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P0N1">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p0N1"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P0P0">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p0P0"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P0P1">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p0P1"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.P0P2">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.p0P2"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.N1N2">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.n1N2"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.N1N1">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.n1N1"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.N1P0">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.n1P0"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.N1P1">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.n1P1"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.N1P2">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.n1P2"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.N2N2">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.n2N2"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.N2N1">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.n2N1"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.N2P0">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.n2P0"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.N2P1">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.n2P1"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.N2P2">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.n2P2"/>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.Grid">
+            <inheritdoc cref="F:MarsClient.MainPageViewModel.grid"/>
+        </member>
+        <member name="F:MarsClient.MainPageViewModel.joinGameCommand">
+            <summary>The backing field for <see cref="P:MarsClient.MainPageViewModel.JoinGameCommand"/>.</summary>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.JoinGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MarsClient.MainPageViewModel.JoinGame"/>.</summary>
+        </member>
+        <member name="F:MarsClient.MainPageViewModel.checkStatusCommand">
+            <summary>The backing field for <see cref="P:MarsClient.MainPageViewModel.CheckStatusCommand"/>.</summary>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.CheckStatusCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MarsClient.MainPageViewModel.CheckStatus"/>.</summary>
+        </member>
+        <member name="F:MarsClient.MainPageViewModel.moveForwardCommand">
+            <summary>The backing field for <see cref="P:MarsClient.MainPageViewModel.MoveForwardCommand"/>.</summary>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.MoveForwardCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MarsClient.MainPageViewModel.MoveForward"/>.</summary>
+        </member>
+        <member name="F:MarsClient.MainPageViewModel.turnLeftCommand">
+            <summary>The backing field for <see cref="P:MarsClient.MainPageViewModel.TurnLeftCommand"/>.</summary>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.TurnLeftCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MarsClient.MainPageViewModel.TurnLeft"/>.</summary>
+        </member>
+        <member name="F:MarsClient.MainPageViewModel.turnRightCommand">
+            <summary>The backing field for <see cref="P:MarsClient.MainPageViewModel.TurnRightCommand"/>.</summary>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.TurnRightCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MarsClient.MainPageViewModel.TurnRight"/>.</summary>
+        </member>
+        <member name="F:MarsClient.MainPageViewModel.moveBackwardsCommand">
+            <summary>The backing field for <see cref="P:MarsClient.MainPageViewModel.MoveBackwardsCommand"/>.</summary>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.MoveBackwardsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MarsClient.MainPageViewModel.MoveBackwards"/>.</summary>
+        </member>
+        <member name="F:MarsClient.MainPageViewModel.dDosAttackCommand">
+            <summary>The backing field for <see cref="P:MarsClient.MainPageViewModel.DDosAttackCommand"/>.</summary>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.DDosAttackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MarsClient.MainPageViewModel.DDosAttack"/>.</summary>
+        </member>
+        <member name="F:MarsClient.MainPageViewModel.moveHelicopterCommand">
+            <summary>The backing field for <see cref="P:MarsClient.MainPageViewModel.MoveHelicopterCommand"/>.</summary>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.MoveHelicopterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MarsClient.MainPageViewModel.MoveHelicopter"/>.</summary>
+        </member>
+        <member name="F:MarsClient.MainPageViewModel.startDockerCommand">
+            <summary>The backing field for <see cref="P:MarsClient.MainPageViewModel.StartDockerCommand"/>.</summary>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.StartDockerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MarsClient.MainPageViewModel.StartDocker"/>.</summary>
+        </member>
+        <member name="F:MarsClient.MainPageViewModel.guessTokenCommand">
+            <summary>The backing field for <see cref="P:MarsClient.MainPageViewModel.GuessTokenCommand"/>.</summary>
+        </member>
+        <member name="P:MarsClient.MainPageViewModel.GuessTokenCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MarsClient.MainPageViewModel.GuessToken"/>.</summary>
+        </member>
+        <member name="P:PosistionsAndColor.Difficulty">
+            <inheritdoc cref="F:PosistionsAndColor.difficulty"/>
+        </member>
+        <member name="P:PosistionsAndColor.Color">
+            <inheritdoc cref="F:PosistionsAndColor.color"/>
+        </member>
+    </members>
+</doc>

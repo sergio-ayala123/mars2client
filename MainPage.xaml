@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MarsClient.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label FontSize="Large" HorizontalOptions="Center" Text="Current Status"/>
+            <Label FontSize="Large" HorizontalOptions="Center" Text="{Binding Status}" />
+
+            <Label Text="GameId" IsVisible="{Binding ShowForm}"/>
+            
+            <Entry Text="{Binding GameId}" IsVisible="{Binding ShowForm}"/>
+
+            <Label Text="UserName" IsVisible="{Binding ShowForm}"/>
+            <Entry Text="{Binding UserName}" IsVisible="{Binding ShowForm}"/>
+
+
+            <Button Command="{Binding JoinGameCommand}" IsVisible="{Binding ShowForm}" Text="Join Game"/>
+            <Button Command="{Binding CheckStatusCommand}" IsVisible="{Binding ShowCheckStatusButton}" Text ="Check Current Game Status"/>
+
+            <Label Text="{Binding Error}" FontSize="Large" TextColor="Red" HorizontalOptions="Center"/>
+            <Label Text="{Binding MoveResult}" FontSize="Medium" HorizontalOptions="Center"/>
+            <Grid HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding ShowControls}">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Source="left.png" Grid.Row="1" Grid.Column="0" Command="{Binding TurnLeftCommand}" IsVisible="{Binding ShowControls}"/>
+                <ImageButton Source="right.png" Grid.Row="1" Grid.Column="2" Command="{Binding TurnRightCommand}" IsVisible="{Binding ShowControls}"/>
+                <ImageButton Source="up.png" Grid.Row="0" Grid.Column="1" Command="{Binding MoveForwardCommand}" IsVisible="{Binding ShowControls}"/>
+                <ImageButton Source="down.png" Grid.Row="2" Grid.Column="1" Command="{Binding MoveBackwardsCommand}" IsVisible="{Binding ShowControls}"/>
+
+                <Label Text="Target Column" Grid.Row="3" Grid.Column="0" IsVisible="{Binding ShowControls}"/>
+                <Label Text="{Binding TargetColumn}" Grid.Row="4" Grid.Column="0" IsVisible="{Binding ShowControls}"/>
+                <Label Text="Target Row" Grid.Row="3" Grid.Column="2" IsVisible="{Binding ShowControls}"/>
+                <Label Text="{Binding TargetRow}" Grid.Row="4" Grid.Column="2" IsVisible="{Binding ShowControls}"/>
+                <Label Text="Rover Column" Grid.Row="5" Grid.Column="0" IsVisible="{Binding ShowControls}"/>
+                <Label Text="{Binding CurrentRoverColumn}" Grid.Row="6" Grid.Column="0" IsVisible="{Binding ShowControls}"/>
+                <Label Text="Rover Row" Grid.Row="5" Grid.Column="2" IsVisible="{Binding ShowControls}"/>
+                <Label Text="{Binding CurrentRoverRow}" Grid.Row="6" Grid.Column="2" IsVisible="{Binding ShowControls}"/>
+            </Grid>
+
+            <Label Text="Battery Level" HorizontalOptions="Center" FontSize="Medium"/>
+            <Label Text="{Binding BatteryLevel}" HorizontalOptions="Center" FontSize="Large"/>
+            <Grid HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <BoxView Color="{Binding P2N2.Color}" Grid.Column="0" Grid.Row="0" />
+                <BoxView Color="{Binding P2N1.Color}" Grid.Column="1" Grid.Row="0"/>
+                <BoxView Color="{Binding P2P0.Color}"  Grid.Column="2" Grid.Row="0"/>
+                <BoxView Color="{Binding P2P1.Color}"  Grid.Column="3"  Grid.Row="0"/>
+                <BoxView Color="{Binding P2P2.Color}"  Grid.Column="4" Grid.Row="0"/>
+                <BoxView Color="{Binding P1N2.Color}" Grid.Column="0" Grid.Row="1"/>
+                <BoxView Color="{Binding P1N1.Color}" Grid.Column="1" Grid.Row="1"/>
+                <BoxView Color="{Binding P1P0.Color}"  Grid.Column="2" Grid.Row="1"/>
+                <BoxView Color="{Binding P1P1.Color}"  Grid.Column="3" Grid.Row="1"/>
+                <BoxView Color="{Binding P1P2.Color}"  Grid.Column="4" Grid.Row="1"/>
+                <BoxView Color="{Binding P0N2.Color}"  Grid.Column="0" Grid.Row="2"/>
+                <BoxView Color="{Binding P0N1.Color}"  Grid.Column="1" Grid.Row="2"/>
+                <BoxView Color="{Binding P0P0.Color}"  Grid.Column="2" Grid.Row="2"/>
+                <BoxView Color="{Binding P0P1.Color}"  Grid.Column="3" Grid.Row="2"/>
+                <BoxView Color="{Binding P0P2.Color}"  Grid.Column="4" Grid.Row="2"/>
+                <BoxView Color="{Binding N1N2.Color}"  Grid.Column="0" Grid.Row="3"/>
+                <BoxView Color="{Binding N1N1.Color}"  Grid.Column="1" Grid.Row="3"/>
+                <BoxView Color="{Binding N1P0.Color}"  Grid.Column="2" Grid.Row="3"/>
+                <BoxView Color="{Binding N1P1.Color}"  Grid.Column="3" Grid.Row="3"/>
+                <BoxView Color="{Binding N1P2.Color}"  Grid.Column="4" Grid.Row="3"/>
+                <BoxView Color="{Binding N2N2.Color}"  Grid.Column="0" Grid.Row="4"/>
+                <BoxView Color="{Binding N2N1.Color}"  Grid.Column="1" Grid.Row="4"/>
+                <BoxView Color="{Binding N2P0.Color}"  Grid.Column="2" Grid.Row="4"/>
+                <BoxView Color="{Binding N2P1.Color}"  Grid.Column="3" Grid.Row="4"/>
+                <BoxView Color="{Binding N2P2.Color}"  Grid.Column="4" Grid.Row="4"/>
+                <ImageButton Source="{Binding FileName}" Grid.Column="2" Grid.Row="2"/>
+
+
+                <Label Text="{Binding P2N2.Difficulty}" FontSize="Medium" Grid.Column="0" Grid.Row="0" />
+                <Label Text="{Binding P2N1.Difficulty}"  FontSize="Medium" Grid.Column="1" Grid.Row="0"/>
+                <Label Text="{Binding P2P0.Difficulty}"  FontSize="Medium" Grid.Column="2" Grid.Row="0"/>
+                <Label Text="{Binding P2P1.Difficulty}"  FontSize="Medium" Grid.Column="3" Grid.Row="0"/>
+                <Label Text="{Binding P2P2.Difficulty}"  FontSize="Medium" Grid.Column="4" Grid.Row="0"/>
+                <Label Text="{Binding P1N2.Difficulty}"  FontSize="Medium" Grid.Column="0" Grid.Row="1"/>
+                <Label Text="{Binding P1N1.Difficulty}"  FontSize="Medium" Grid.Column="1" Grid.Row="1"/>
+                <Label Text="{Binding P1P0.Difficulty}"  FontSize="Medium" Grid.Column="2" Grid.Row="1"/>
+                <Label Text="{Binding P1P1.Difficulty}"  FontSize="Medium" Grid.Column="3" Grid.Row="1"/>
+                <Label Text="{Binding P1P2.Difficulty}"  FontSize="Medium" Grid.Column="4" Grid.Row="1"/>
+                <Label Text="{Binding P0N2.Difficulty}"  FontSize="Medium" Grid.Column="0" Grid.Row="2"/>
+                <Label Text="{Binding P0N1.Difficulty}"  FontSize="Medium" Grid.Column="1" Grid.Row="2"/>
+                <Label Text="{Binding P0P0.Difficulty}"  FontSize="Medium" Grid.Column="2" Grid.Row="2"/>
+                <Label Text="{Binding P0P1.Difficulty}"  FontSize="Medium" Grid.Column="3" Grid.Row="2"/>
+                <Label Text="{Binding P0P2.Difficulty}"  FontSize="Medium" Grid.Column="4" Grid.Row="2"/>
+                <Label Text="{Binding N1N2.Difficulty}"  FontSize="Medium" Grid.Column="0" Grid.Row="3"/>
+                <Label Text="{Binding N1N1.Difficulty}"  FontSize="Medium" Grid.Column="1" Grid.Row="3"/>
+                <Label Text="{Binding N1P0.Difficulty}"  FontSize="Medium" Grid.Column="2" Grid.Row="3"/>
+                <Label Text="{Binding N1P1.Difficulty}"  FontSize="Medium" Grid.Column="3" Grid.Row="3"/>
+                <Label Text="{Binding N1P2.Difficulty}"  FontSize="Medium" Grid.Column="4" Grid.Row="3"/>
+                <Label Text="{Binding N2N2.Difficulty}"  FontSize="Medium" Grid.Column="0" Grid.Row="4"/>
+                <Label Text="{Binding N2N1.Difficulty}"  FontSize="Medium" Grid.Column="1" Grid.Row="4"/>
+                <Label Text="{Binding N2P0.Difficulty}"  FontSize="Medium" Grid.Column="2" Grid.Row="4"/>
+                <Label Text="{Binding N2P1.Difficulty}"  FontSize="Medium" Grid.Column="3" Grid.Row="4"/>
+                <Label Text="{Binding N2P2.Difficulty}"  FontSize="Medium" Grid.Column="4" Grid.Row="4"/>
+            </Grid>
+
+            <Label Text="{Binding CurrentTerrainCell}" HorizontalOptions="Center"/>
+            <Button Command="{Binding MoveHelicopterCommand}" HorizontalOptions="Center" Text="Move Helicopter" IsVisible="{Binding ShowControls}"/>
+            <Button Command="{Binding StartDockerCommand}" HorizontalOptions="Center" Text="Start Docker" />
+            <Button Command="{Binding GuessTokenCommand}" HorizontalOptions="Center" Text="Guess Tokens" IsVisible="{Binding ShowControls}"/>
+            <Label Text="{Binding TokenGuess}" HorizontalOptions="Center" FontSize="Large"/>
+
+
+            <CollectionView ItemsSource="{Binding GoodTokens}" HorizontalOptions="Center">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" TextColor="White" HorizontalOptions="Center"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+
+
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
