@@ -161,7 +161,7 @@ namespace MarsClient
                     {
                         for(int i = 0; i <= 9; i++)
                         {
-                            var newCell = ((cell.LowerLeftColumn+x)+","+(cell.LowerLeftRow + i)).ToString();
+                            var newCell = ((cell.LowerLeftY+x)+","+(cell.LowerLeftX + i)).ToString();
                            
                             if (!GameMap.ContainsKey(newCell))
                             {
@@ -171,11 +171,11 @@ namespace MarsClient
                     }
                 }
                 token = joinResponse.Token;
-                TargetColumn = joinResponse.TargetColumn;
-                TargetRow = joinResponse.TargetRow;
+                TargetColumn = joinResponse.TargetY;
+                TargetRow = joinResponse.TargetX;
 
-                ingenuityRow = joinResponse.StartingRow;
-                ingenuityCol = joinResponse.StartingColumn;
+                ingenuityRow = joinResponse.StartingX;
+                ingenuityCol = joinResponse.StartingY;
                 Status = "Joined Successfully";
                 ShowForm = false;
                 ShowCheckStatusButton = true;
@@ -292,12 +292,12 @@ namespace MarsClient
             {
 
             var res = await response.Content.ReadFromJsonAsync<IngenuityMoveResponse>();
-            ingenuityCol = res.Column;
-            ingenuityRow = res.Row;
+            ingenuityCol = res.Y;
+            ingenuityRow = res.Y;
             foreach(var tile in res.Neighbors)
             {
 
-                var tileToAdd = tile.Column+","+tile.Row;
+                var tileToAdd = tile.Y+","+tile.X;
                 if (GameMap.ContainsKey(tileToAdd))
                 {
                     GameMap[tileToAdd] = tile.Difficulty;
@@ -409,9 +409,9 @@ namespace MarsClient
 
                 var moveResult = await response.Content.ReadFromJsonAsync<MoveResponse>();
                 MoveResult = moveResult.Message;
-                CurrentRoverRow = moveResult.Row;
-                CurrentRoverColumn = moveResult.Column;
-                var currCell = moveResult.Neighbors.Where(a => a.Row == CurrentRoverRow && a.Column == CurrentRoverColumn).FirstOrDefault();
+                CurrentRoverRow = moveResult.X;
+                CurrentRoverColumn = moveResult.Y;
+                var currCell = moveResult.Neighbors.Where(a => a.X == CurrentRoverRow && a.Y == CurrentRoverColumn).FirstOrDefault();
                 CurrentTerrainCell = currCell.Difficulty.ToString();
                 BatteryLevel = moveResult.BatteryLevel;
                 if (moveResult.Orientation == "South")
@@ -436,7 +436,7 @@ namespace MarsClient
                 foreach(var neighbor in moveResult.Neighbors)
                 {
 
-                    var updatedCell = neighbor.Column+","+ neighbor.Row;
+                    var updatedCell = neighbor.Y+","+ neighbor.X;
                     if (GameMap.ContainsKey(updatedCell))
                     {
                         GameMap[updatedCell] = neighbor.Difficulty;
@@ -446,21 +446,21 @@ namespace MarsClient
 
                     neighborCol = "0";
                     neighborRow = "0";
-                    if(neighbor.Column >= CurrentRoverColumn)
+                    if(neighbor.Y >= CurrentRoverColumn)
                     {
-                        neighborCol = (neighbor.Column - CurrentRoverColumn).ToString();
+                        neighborCol = (neighbor.Y - CurrentRoverColumn).ToString();
                     }
-                    if(neighbor.Column < CurrentRoverColumn)
+                    if(neighbor.Y < CurrentRoverColumn)
                     {
-                        neighborCol = "N"+(CurrentRoverColumn - neighbor.Column).ToString();
+                        neighborCol = "N"+(CurrentRoverColumn - neighbor.Y).ToString();
                     }
-                    if(neighbor.Row >= CurrentRoverRow)
+                    if(neighbor.X >= CurrentRoverRow)
                     {
-                        neighborRow = (neighbor.Row - CurrentRoverRow).ToString();  
+                        neighborRow = (neighbor.X - CurrentRoverRow).ToString();  
                     }
-                    if (neighbor.Row < CurrentRoverRow)
+                    if (neighbor.X < CurrentRoverRow)
                     {
-                        neighborRow = "N"+(CurrentRoverRow- neighbor.Row).ToString();
+                        neighborRow = "N"+(CurrentRoverRow- neighbor.X).ToString();
                     }
                     var cell = neighborCell + neighborCol + neighborRow;
                     stringToObjectDictionary[cell].Difficulty = neighbor.Difficulty.ToString();
